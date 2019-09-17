@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	
+
+
+	<title>Winning Smile</title>
+		<link rel="stylesheet" href="style.css" type="text/css">
+	
+		</head>
+
+<body>
+
+
+		<div id="page">
+			<div id="logo">
+			<center><img src="images/logo.png" size =200 width= 400  alt="Winning Smile"/></center>
+			</div>
+			
+			<ul id="navigation">
+				<li><a href="../index.html" class="on">Home</a></li>
+				<li><a href="dental.html">Dental Treatment</a></li>
+				<li><a href="cleaning.html">Cleaning And Whitening</a></li>
+				<li><a href="cosmetic.html">Cosmetics</a></li>
+				<li><a href="contact.html" > Contact </a></li>
+			</ul>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="images/slideshow1.jpg" style="width:100%">
+  
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="images/slideshow2.jpg" style="width:100%">
+  
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="images/slideshow3.jpg" style="width:100%">
+  
+</div>
+</div>
+<br></br>
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(carousel, 4000); // Change image every 2 seconds
+}
+</script>
+<script> 
+$(document).ready(function(){
+    $("#flip").click(function(){
+        $("#panel").slideDown("slow");
+    });
+});
+</script>
+<div>
+<br></br>
+<div id="flip">Click to slide down panel</div>
+<div id="panel">Dental Health and Care Clinic</div>
+<b><u>Dental Treatment</u> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <u> Cleaning and Whitening</u> &nbsp &nbsp &nbsp &nbsp &nbsp <u> Cosmetics</u></b>
+</div>
+<div>
+<img src="images/home1.jpg"/><img src="images/home2.jpg" size= 300 width =270 /><img src="images/home4.jpg" size= 300 width =300 />
+</div>
+<br></br>
+<div>
+"We provide Dental Treatment , Cleaning and Whitening of teeth.We also deals in Cosmetic Treatments.
+Dental treatment removes parts of the enamel to improve the appearance of the tooth. It may be used to correct a small chip, or to alter the length, shape or position of teeth, as well as when there is Tooth Size Discrepancy;[6][7] it can be used to correct crooked or excessively long teeth. The removed enamel is irreplaceable, and may sometimes expose dentin. It is also known as enameloplasty, odontoplasty, contouring, recontouring, slenderizing, stripping. This procedure offers fast results and can even be a substitute for braces under certain circumstances."
+</div>
+<br></br>
+<div>
+<b> <font size="3"> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <u>THE WINNING SMILE TEAM</u></b></font>
+<br></br>
+<img src="images/team.png" height = 300 width=850/>
+</div>
+<br></br>
+<div>
+Copyright&copy- All Rights Reserved 2017
+</div>
+</div>
+</body>
+</html>

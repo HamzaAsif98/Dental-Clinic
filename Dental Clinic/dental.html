@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<script>
+
+function setCookie(cname,cvalue,exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires=" + d.toGMTString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+function checkCookie() {
+    var user=getCookie("username");
+    if (user != "") {
+        alert("Welcome again " + user);
+    } else {
+       user = prompt("Please enter your name:","");
+       if (user != "" && user != null) {
+           setCookie("username", user, 30);
+       }
+    }
+}
+
+</script>
+	<title>Winning Smile</title>
+		<link rel="stylesheet" href="style.css" type="text/css">
+		</head>
+		<body onload="checkCookie()">
+</body>
+<body>
+
+
+		<div id="page">
+			<div id="logo">
+			<center><img src="images/logo.png" size =200 width= 400  alt="Winning Smile"/></center>
+			</div>
+			
+			<ul id="navigation">
+				<li><a href="index.html" >Home</a></li>
+				<li><a href="dental.html" class="on">Dental Treatment</a></li>
+				<li><a href="cleaning.html">Cleaning And Whitening</a></li>
+				<li><a href="cosmetic.html">Cosmetics</a></li>
+				<li><a href="contact.html" > Contact </a></li>
+			</ul>
+			<br>
+			<div>
+			<img src = "images/dental.jpg" size= 300 width =900>
+			</div>
+			<br>
+			<div>
+			<p><b><u>Types Of Dental Treatment </u></b></p>
+			</div>
+			<br>
+			<div>
+			<b>Fillings</b>
+			<br>
+			Fillings are used to restore damaged, broken or decayed teeth. There are 2 types of filling materials used: Amalgam fillings or tooth colored fillings. Amalgam fillings are made from a mixture of metals. These fillings are extremely durable and have a longer life span. Tooth colored or composite fillings are made from a resin. These are a natural looking alternative. These fillings can be made virtually undetectable.
+			</div>
+			<br>
+			<div>
+			<b>Root Canal</b>
+			<br>
+			Root Canal Treatment is required when the root of a tooth is damaged or decayed and at risk of being infected. The treatment consists of removing the infection and restructuring the core of the tooth, helping to prevent the need for an extraction in the future.
+			</div>
+			<br>
+			<div>
+			<b>Crowns & Bridges</b>
+			<br>
+			Crowns and Bridges :Dental crowns and bridges are used to treat broken,cracked or missing teeth.Crowns are small porcelain caps placed on top of teeth helping rebuild their shape ensuring strength and security.Bridges are used in a similar way but secure multiple broken or missing teeth instead.Both treatments are reliable,strong and extremely long lasting and affordable.
+			</div>
+			<br>
+			<b>Related Videos-</b>
+			<br>
+			<br>
+			<div>
+			<iframe width=290 height=290 src="https://www.youtube.com/embed/MfUWmeA4kjI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			<iframe width=290 height=290 src="https://www.youtube.com/embed/nznWnGLZffw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			<iframe width=290 height=290 src="https://www.youtube.com/embed/LgiDSgCMwdU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			</div>
+			<br>
+			<div>
+Copyright&copy- All Rights Reserved 2017
+</div>
+</div>
+			</body>
+</html>

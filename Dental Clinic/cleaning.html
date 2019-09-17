@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<script>
+	function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    var expires = "expires="+d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+function checkCookie() {
+    var user = getCookie("username");
+    if (user != "") {
+        alert("Welcome again " + user);
+    } else {
+        user = prompt("Please enter your name:", "");
+        if (user != "" && user != null) {
+            setCookie("username", user, 365);
+        }
+    }
+}
+</script>
+	<title>Winning Smile</title>
+		<link rel="stylesheet" href="style.css" type="text/css">
+		</head>
+<body>
+
+		<div id="page">
+			<div id="logo">
+			<center><img src="images/logo.png" size =200 width= 400  alt="Winning Smile"/></center>
+			</div>
+			
+			<ul id="navigation">
+				<li><a href="index.html" >Home</a></li>
+				<li><a href="dental.html">Dental Treatment</a></li>
+				<li><a href="cleaning.html" class="on">Cleaning And Whitening</a></li>
+				<li><a href="cosmetic.html">Cosmetics</a></li>
+				<li><a href="contact.html" > Contact </a></li>
+			</ul>
+			<br></br>
+			<img src = "images/cleaning.jpg " width = 900>
+			<br></br>
+			<div>
+			<font size="4"><b><u>Cleaning</u></b></font>
+			<br>
+			<br>
+			The mouth is an area that’s completely different from the entire body, and it takes quite a beating from the food we eat and the talking we do all day long. And this unique environment requires special care.
+			Teeth cleanings remove the buildup of plaque and tartar. This buildup is for the most part natural But too much buildup leads to gum disease.
+			<br>
+			Gum disease is when your body’s immune system is responding to this tartar buildup with inflamed and bleeding gums. The immune system response is successful at killing off invaders like infection and flu bugs, but at a cost: like a war, there are innocent bystanders that get slaughtered. As gum disease progresses, so does the destruction to your bone and tissues in your mouth.
+			<br>
+			Your immune system is meant only to fight off infection for a short period of time — chronic activation of the immune system means it can get worn out and it won’t be as strong to fight off an illness. Chronic activation of the immune system can lead to diseases in the rest of your body.
+			<br></br>
+			</div>
+			<br>
+			<div>
+			<font size="4"><b><u>Whitening</u></b></font>
+			<br>
+			<br>
+			Many Products on the market claim to give you 'Pearly Whites', however there is still nothing on the market that whitens teeth as much and as quickly as the traditional gel and mouth shield. 
+			<br>
+			The initial cost is between €350-€400 as it includes getting a molding of your teeth done and the first whitening kit.
+			</div>
+			<br>
+			<div>
+			<font size="4"><b>How we do this?</b></font>
+			<br>
+			<br>
+			<button onclick="openWin()">Click Here</button>
+<script>			
+function openWin() {
+   window.open( "https://www.youtube.com/embed/l7GCh64pE8I ");   // Opens a new window
+}
+</script>
+			<iframe width="854" height="480" src="https://www.youtube.com/embed/l7GCh64pE8I" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+			</div>
+			<br>
+			<div>
+Copyright&copy- All Rights Reserved 2017
+</div>
+</div>
+			</body>
+</html>
